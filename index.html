@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sway Dancers - Attitudes In Motion. Modern contemporary dance troupe performing Latin, Hip-Hop, Freestyle, Jazz and Bollywood in Sri Lanka.">
+    <title>Sway Dancers | Attitudes In Motion</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0B0B0B',
+                        primary: '#E10600',
+                        text: {
+                            primary: '#F5F5F5',
+                            muted: '#9B9B9B'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Bebas Neue"', 'sans-serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Utilities */
+        body {
+            background-color: #0B0B0B;
+            color: #F5F5F5;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.05em;
+        }
+
+        .glass-header {
+            background: rgba(11, 11, 11, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+            color: transparent;
+        }
+
+        /* Hide scrollbar for clean look in some sections if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 z-50">
+                <div
+                    class="w-10 h-10 bg-primary flex items-center justify-center text-white font-heading text-xl font-bold bg-opacity-90">
+                    S</div>
+                <span class="font-heading text-2xl tracking-widest text-white">SWAY <span
+                        class="text-primary">DANCERS</span></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#home"
+                    class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Home</a>
+                <a href="#about"
+                    class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">About</a>
+                <a href="#performances"
+                    class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Performances</a>
+                <a href="#gallery"
+                    class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Gallery</a>
+                <a href="#reviews"
+                    class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Reviews</a>
+                <a href="#contact"
+                    class="px-5 py-2 bg-primary text-white text-sm font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all clip-path-slant">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden z-50 flex flex-col gap-1.5 group">
+                <span class="w-8 h-0.5 bg-white transition-all group-hover:bg-primary"></span>
+                <span class="w-6 h-0.5 bg-white transition-all group-hover:bg-primary ml-auto"></span>
+                <span class="w-8 h-0.5 bg-white transition-all group-hover:bg-primary"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-background/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-300 md:hidden h-screen w-screen">
+            <a href="#home" class="mobile-link text-2xl font-heading tracking-wider hover:text-primary">Home</a>
+            <a href="#about" class="mobile-link text-2xl font-heading tracking-wider hover:text-primary">About</a>
+            <a href="#performances"
+                class="mobile-link text-2xl font-heading tracking-wider hover:text-primary">Performances</a>
+            <a href="#gallery" class="mobile-link text-2xl font-heading tracking-wider hover:text-primary">Gallery</a>
+            <a href="#reviews" class="mobile-link text-2xl font-heading tracking-wider hover:text-primary">Reviews</a>
+            <a href="#contact" class="mobile-link text-2xl font-heading tracking-wider text-primary">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background Overlay -->
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent z-10 w-full md:w-3/4">
+        </div>
+
+        <!-- Background Image/Video Placeholder -->
+        <div class="absolute inset-0 z-0">
+            <!-- Placeholder for Hero Image - In a real scenario, this would be a high-res image or video -->
+            <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=1974&auto=format&fit=crop"
+                alt="Dance Performance" class="w-full h-full object-cover opacity-60 ml-auto md:w-full object-center">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-20">
+            <div class="max-w-3xl">
+                <h2
+                    class="text-primary font-bold tracking-[0.2em] mb-4 animate-fade-in-up uppercase text-sm md:text-base">
+                    Attitudes In Motion</h2>
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold leading-none mb-6 animate-fade-in-up"
+                    style="animation-delay: 100ms;">
+                    SWAY <br>
+                    <span class="text-stroke">DANCERS</span>
+                </h1>
+                <p class="text-text-muted text-lg md:text-xl max-w-xl mb-10 leading-relaxed animate-fade-in-up"
+                    style="animation-delay: 200ms;">
+                    Modern contemporary dance troupe performing Latin, Hip-Hop, Freestyle, Jazz and Bollywood in Sri
+                    Lanka. We bring energy and elegance to every stage.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style="animation-delay: 300ms;">
+                    <a href="#contact"
+                        class="px-8 py-4 bg-primary text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors text-center">
+                        Book a Performance
+                    </a>
+                    <a href="#gallery"
+                        class="px-8 py-4 border border-white/20 text-white font-bold uppercase tracking-wider hover:bg-white/10 transition-colors backdrop-blur-sm text-center">
+                        Watch Highlights
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce hidden md:block">
+            <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32 bg-background relative overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                    <div class="w-full md:w-1/2 relative reveal-on-scroll">
+                        <div class="aspect-[4/5] bg-neutral-900 overflow-hidden relative group">
+                            <!-- Local Team Image -->
+                            <img src="assets/team.jpg" alt="Dance Team"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                            <!-- Decorative Elements -->
+                            <div class="absolute -bottom-6 -right-6 w-24 h-24 border-2 border-primary z-10"></div>
+                            <div class="absolute -top-6 -left-6 w-24 h-24 border-2 border-white/10 z-0"></div>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-1/2 reveal-on-scroll">
+                        <h2 class="text-primary font-bold tracking-[0.2em] mb-2 uppercase text-sm">Who We Are</h2>
+                        <h3 class="text-4xl md:text-5xl font-heading mb-6">MORE THAN JUST <span
+                                class="text-white">MOVEMENT</span></h3>
+                        <p class="text-text-muted mb-6 leading-relaxed">
+                            Established with a passion for rhythm and expression, Sway Dancers has evolved into one of
+                            Sri Lanka's premier dance ensembles. We bridge the gap between traditional grace and modern
+                            energy.
+                        </p>
+                        <p class="text-text-muted mb-8 leading-relaxed">
+                            Our team consists of professionally trained dancers who specialize in a diverse range of
+                            styles including Latin American, Hip-Hop, Contemporary, and Fusion. Whether it's a grand
+                            wedding entrance or a high-energy corporate showcase, we tell stories through movement.
+                        </p>
+
+                        <div class="grid grid-cols-3 gap-6 border-t border-white/10 pt-8">
+                            <div>
+                                <span class="block text-3xl font-heading text-white">500+</span>
+                                <span class="text-xs text-text-muted uppercase tracking-wider">Shows</span>
+                            </div>
+                            <div>
+                                <span class="block text-3xl font-heading text-white">10+</span>
+                                <span class="text-xs text-text-muted uppercase tracking-wider">Years</span>
+                            </div>
+                            <div>
+                                <span class="block text-3xl font-heading text-white">100%</span>
+                                <span class="text-xs text-text-muted uppercase tracking-wider">Passion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performances / Services Section -->
+        <section id="performances" class="py-20 md:py-32 bg-neutral-900/30">
+            <div class="container mx-auto px-6">
+                <div class="mb-16 text-center max-w-2xl mx-auto reveal-on-scroll">
+                    <h2 class="text-primary font-bold tracking-[0.2em] mb-2 uppercase text-sm">What We Do</h2>
+                    <h3 class="text-4xl md:text-5xl font-heading mb-6">OUR <span class="text-stroke">PERFORMANCES</span>
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="group bg-neutral-900/50 border border-white/5 p-8 hover:bg-neutral-800/50 transition-all duration-300 hover:-translate-y-2 reveal-on-scroll">
+                        <div
+                            class="w-12 h-12 bg-primary/20 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-3">Wedding Performances</h4>
+                        <p class="text-text-muted text-sm leading-relaxed">Make your special day magical with our custom
+                            choreographed first dances and entertaining troupe performances.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="group bg-neutral-900/50 border border-white/5 p-8 hover:bg-neutral-800/50 transition-all duration-300 hover:-translate-y-2 reveal-on-scroll">
+                        <div
+                            class="w-12 h-12 bg-primary/20 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-3">Corporate Events</h4>
+                        <p class="text-text-muted text-sm leading-relaxed">High-energy opening acts and thematic
+                            performances to elevate your product launches and award nights.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="group bg-neutral-900/50 border border-white/5 p-8 hover:bg-neutral-800/50 transition-all duration-300 hover:-translate-y-2 reveal-on-scroll">
+                        <div
+                            class="w-12 h-12 bg-primary/20 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-3">Stage Shows</h4>
+                        <p class="text-text-muted text-sm leading-relaxed">Full-production stage shows featuring a mix
+                            of Latin, Jazz, and Hip-Hop styles for concerts and festivals.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="group bg-neutral-900/50 border border-white/5 p-8 hover:bg-neutral-800/50 transition-all duration-300 hover:-translate-y-2 reveal-on-scroll">
+                        <div
+                            class="w-12 h-12 bg-primary/20 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-3">Cultural & Fusion</h4>
+                        <p class="text-text-muted text-sm leading-relaxed">Unique blends of traditional Sri Lankan dance
+                            elements with modern contemporary beats.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        class="group bg-neutral-900/50 border border-white/5 p-8 hover:bg-neutral-800/50 transition-all duration-300 hover:-translate-y-2 reveal-on-scroll">
+                        <div
+                            class="w-12 h-12 bg-primary/20 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-3">Choreography</h4>
+                        <p class="text-text-muted text-sm leading-relaxed">Professional choreography services for music
+                            videos, commercials, and private events.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 md:py-32 bg-background relative">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal-on-scroll">
+                    <div>
+                        <h2 class="text-primary font-bold tracking-[0.2em] mb-2 uppercase text-sm">Gallery</h2>
+                        <h3 class="text-4xl md:text-5xl font-heading mb-6">CAPTURED <span
+                                class="text-stroke">MOMENTS</span></h3>
+                    </div>
+                    <a href="#"
+                        class="hidden md:inline-block border-b border-primary text-primary pb-1 hover:text-white hover:border-white transition-colors">View
+                        All on Instagram</a>
+                </div>
+
+                <!-- Masonry Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+                    <!-- Image 1 -->
+                    <div class="row-span-2 col-span-2 md:col-span-2 md:row-span-2 relative group overflow-hidden cursor-pointer reveal-on-scroll"
+                        onclick="openLightbox(this)">
+                        <img src="assets/gallery/team_7.jpg"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            alt="Gallery Image 1">
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white font-heading tracking-wider">Expand</span>
+                        </div>
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="row-span-1 col-span-1 relative group overflow-hidden cursor-pointer reveal-on-scroll"
+                        onclick="openLightbox(this)">
+                        <img src="assets/gallery/team_1.jpg"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            alt="Gallery Image 2">
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="row-span-2 col-span-1 relative group overflow-hidden cursor-pointer reveal-on-scroll"
+                        onclick="openLightbox(this)">
+                        <img src="assets/gallery/team_4.jpg"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            alt="Gallery Image 3">
+                    </div>
+                    <!-- Image 4 -->
+                    <div class="row-span-1 col-span-1 relative group overflow-hidden cursor-pointer reveal-on-scroll"
+                        onclick="openLightbox(this)">
+                        <img src="assets/gallery/team_3.jpg"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            alt="Gallery Image 4">
+                    </div>
+                    <!-- Image 5 (Wide) -->
+                    <div class="col-span-2 row-span-1 relative group overflow-hidden cursor-pointer reveal-on-scroll"
+                        onclick="openLightbox(this)">
+                        <img src="assets/gallery/team_5.jpg"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            alt="Gallery Image 5">
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center md:hidden">
+                    <a href="#" class="inline-block border-b border-primary text-primary pb-1">View All on Instagram</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="py-20 md:py-32 bg-neutral-900/30">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal-on-scroll">
+                    <h2 class="text-primary font-bold tracking-[0.2em] mb-2 uppercase text-sm">Testimonials</h2>
+                    <h3 class="text-4xl md:text-5xl font-heading mb-6">WHAT THEY <span class="text-stroke">SAY</span>
+                    </h3>
+                    <div class="flex justify-center md:justify-end gap-2 mb-4">
+                        <button id="prev-review"
+                            class="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors rounded-full">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+                        <button id="next-review"
+                            class="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors rounded-full">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Scrollable Container -->
+                    <div id="reviews-container"
+                        class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory no-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
+                        <!-- Review 1 -->
+                        <div
+                            class="min-w-[300px] md:min-w-[400px] snap-center bg-background p-8 border border-white/5 relative reveal-on-scroll">
+                            <div class="text-primary text-4xl font-heading mb-4">"</div>
+                            <p class="text-text-muted mb-6 italic">"The wedding dancing team did an amazing job! Their
+                                performances were outstanding, and we received so many compliments from our guests.
+                                Everyone truly enjoyed the dance items. They even performed a lovely welcome dance for
+                                the going-away dress change and ended with a beautiful final performance. They were easy
+                                to coordinate with, and their prices are very reasonable. Highly recommended!"</p>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center text-xs text-white">
+                                    SK</div>
+                                <div>
+                                    <h5 class="text-white font-bold text-sm">Sachith Kasthuriarachchi</h5>
+                                    <span class="text-xs text-text-muted">Wedding Client</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="min-w-[300px] md:min-w-[400px] snap-center bg-background p-8 border border-white/5 relative reveal-on-scroll"
+                            style="transition-delay: 100ms;">
+                            <div class="text-primary text-4xl font-heading mb-4">"</div>
+                            <p class="text-text-muted mb-6 italic text-sm">"We would like to extend our heartfelt
+                                appreciation to Sway Dancers for their outstanding performance at My Flight Zone Family
+                                Night 2025! Your incredible talent, energy, and glamour lit up the stage and truly
+                                elevated
+                                the entire event. The passion and professionalism your team brought made the evening
+                                unforgettable."</p>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center text-xs text-white">
+                                    PL</div>
+                                <div>
+                                    <h5 class="text-white font-bold text-sm">Prasanna Liyanage</h5>
+                                    <span class="text-xs text-text-muted">My Flight Zone</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="min-w-[300px] md:min-w-[400px] snap-center bg-background p-8 border border-white/5 relative reveal-on-scroll"
+                            style="transition-delay: 200ms;">
+                            <div class="text-primary text-4xl font-heading mb-4">"</div>
+                            <p class="text-text-muted mb-6 italic">"Highly recommend this Dancing group for everyone and
+                                that team is very talented. Good communication with customers.. Good job.. Thank you
+                                very
+                                much."</p>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center text-xs text-white">
+                                    AM</div>
+                                <div>
+                                    <h5 class="text-white font-bold text-sm">Ann Malka</h5>
+                                    <span class="text-xs text-text-muted">Client</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="min-w-[300px] md:min-w-[400px] snap-center bg-background p-8 border border-white/5 relative reveal-on-scroll"
+                            style="transition-delay: 300ms;">
+                            <div class="text-primary text-4xl font-heading mb-4">"</div>
+                            <p class="text-text-muted mb-6 italic">"Thank you Charitha & the team for your wonderful
+                                performance on our day ♥️ You guys are amazing ♥️ Highly recommend"</p>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center text-xs text-white">
+                                    DK</div>
+                                <div>
+                                    <h5 class="text-white font-bold text-sm">Dinelka Kulasinghearachchi</h5>
+                                    <span class="text-xs text-text-muted">Harshana & Dinelka (Shangri-La Colombo)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 5 -->
+                        <div class="min-w-[300px] md:min-w-[400px] snap-center bg-background p-8 border border-white/5 relative reveal-on-scroll"
+                            style="transition-delay: 400ms;">
+                            <div class="text-primary text-4xl font-heading mb-4">"</div>
+                            <p class="text-text-muted mb-6 italic">"I highly recommend Sway Dancers for dancing events
+                                in Sri Lanka. They made our homecoming day memorable and the crew was awesome too."</p>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center text-xs text-white">
+                                    KK</div>
+                                <div>
+                                    <h5 class="text-white font-bold text-sm">Kasun Karunaratne</h5>
+                                    <span class="text-xs text-text-muted">Homecoming Client</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 md:py-32 relative bg-primary overflow-hidden">
+            <div
+                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-multiply opacity-50">
+            </div>
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <h2 class="text-4xl md:text-6xl font-heading text-white mb-6 uppercase">Make Your Event <span
+                        class="text-black bg-white px-2">Unforgettable</span></h2>
+                <p class="text-white/90 text-lg md:text-xl max-w-2xl mx-auto mb-10">From intimate gatherings to grand
+                    stages, we bring the rhythm that moves your audience.</p>
+                <a href="#contact"
+                    class="inline-block px-10 py-5 bg-black text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">Get
+                    a Quote</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-background">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-16">
+                    <div class="w-full lg:w-1/3 reveal-on-scroll">
+                        <h2 class="text-primary font-bold tracking-[0.2em] mb-2 uppercase text-sm">Get In Touch</h2>
+                        <h3 class="text-4xl md:text-5xl font-heading mb-8">LET'S <span class="text-stroke">TALK</span>
+                        </h3>
+
+                        <div class="space-y-8">
+                            <div>
+                                <h5 class="text-white font-bold mb-1">Call Us</h5>
+                                <p class="text-text-muted">+94 77 123 4567</p>
+                                <p class="text-text-muted">+94 11 234 5678</p>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold mb-1">Email Us</h5>
+                                <p class="text-text-muted">bookings@swaydancers.lk</p>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold mb-1">Visit Us</h5>
+                                <p class="text-text-muted">No. 123, Dance Avenue,<br>Colombo 07, Sri Lanka</p>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <a href="#"
+                                    class="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors hover:-translate-y-1"><span
+                                        class="sr-only">Facebook</span>FB</a>
+                                <a href="#"
+                                    class="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors hover:-translate-y-1"><span
+                                        class="sr-only">Instagram</span>IG</a>
+                                <a href="#"
+                                    class="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors hover:-translate-y-1"><span
+                                        class="sr-only">YouTube</span>YT</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-2/3 bg-neutral-900/30 p-8 md:p-12 border border-white/5 reveal-on-scroll">
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label for="name"
+                                        class="text-sm font-bold uppercase tracking-wider text-text-muted">Name</label>
+                                    <input type="text" id="name"
+                                        class="w-full bg-background border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                                        placeholder="Your Name">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="phone"
+                                        class="text-sm font-bold uppercase tracking-wider text-text-muted">Phone</label>
+                                    <input type="tel" id="phone"
+                                        class="w-full bg-background border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                                        placeholder="+94 7X XXX XXXX">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label for="email"
+                                        class="text-sm font-bold uppercase tracking-wider text-text-muted">Email</label>
+                                    <input type="email" id="email"
+                                        class="w-full bg-background border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                                        placeholder="your@email.com">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="date"
+                                        class="text-sm font-bold uppercase tracking-wider text-text-muted">Event
+                                        Date</label>
+                                    <input type="date" id="date"
+                                        class="w-full bg-background border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="message"
+                                    class="text-sm font-bold uppercase tracking-wider text-text-muted">Message</label>
+                                <textarea id="message" rows="4"
+                                    class="w-full bg-background border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                                    placeholder="Tell us about your event..."></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full md:w-auto px-8 py-4 bg-primary text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all">Send
+                                Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-16 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
+                <a href="#" class="flex items-center gap-2">
+                    <div
+                        class="w-8 h-8 bg-primary flex items-center justify-center text-white font-heading text-lg font-bold">
+                        S</div>
+                    <span class="font-heading text-xl tracking-widest text-white">SWAY <span
+                            class="text-primary">DANCERS</span></span>
+                </a>
+                <div class="flex flex-wrap justify-center gap-8 text-sm font-medium text-text-muted">
+                    <a href="#home" class="hover:text-white transition-colors">Home</a>
+                    <a href="#about" class="hover:text-white transition-colors">About</a>
+                    <a href="#performances" class="hover:text-white transition-colors">Performances</a>
+                    <a href="#gallery" class="hover:text-white transition-colors">Gallery</a>
+                    <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+            <div class="text-center text-text-muted text-xs border-t border-white/5 pt-8">
+                <p>&copy; 2026 Sway Dancers. All rights reserved. Designed with energy.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[60] bg-black/95 hidden flex items-center justify-center p-4"
+        onclick="closeLightbox()">
+        <button class="absolute top-4 right-4 text-white hover:text-primary p-2">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <img id="lightbox-img" src="" alt="Full view" class="max-h-[90vh] max-w-full object-contain shadow-2xl">
+    </div>
+
+    <!-- Sticky Buttons -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-4">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/94771234567" target="_blank"
+            class="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-lg shadow-black/50 hover:scale-110 transition-transform hover:shadow-[#25D366]/50">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c1.001.54 2.137.893 3.195.893 3.167 0 5.764-2.585 5.766-5.765.001-1.545-.601-2.996-1.696-4.093l-.11-.098c-1.096-1.066-2.544-1.661-4.148-1.685l-.201-.001h-.001zm0-2c2.195 0 4.266.854 5.817 2.405 1.554 1.551 2.409 3.618 2.407 5.819-.003 4.54-3.693 8.232-8.229 8.234-1.405.001-2.787-.348-4.008-.999l-4.479 1.175 1.196-4.363c-.722-1.252-1.104-2.673-1.102-4.116.002-4.541 3.695-8.235 8.232-8.235h.001.159zm-.165 14.502h.165c4.12-.002 7.472-3.354 7.474-7.47.001-1.996-.775-3.873-2.185-5.281l-.109-.101c-1.408-1.344-3.279-2.083-5.275-2.082-4.119.002-7.471 3.356-7.469 7.472-.001 1.517.465 2.977 1.346 4.195l.18.271-1.028 2.923 3.098-1.085.284.218c1.084.819 2.388 1.258 3.515 1.272l-1.921-1.921zm1.193-4.576l-.053.033c-.765.474-1.28.847-1.366 1.144-.069.237-.091.737.494 1.832.185.347.387.653.606.911.966 1.137 1.942 1.516 2.492 1.583.568.069 1.115-.17 1.488-.501.077-.068.146-.145.207-.229l.068-.103c.532-.823.364-1.087.054-1.242l-1.559-.769c-.279-.138-.492-.095-.694.135l-.571.657c-.126.145-.286.17-.468.1-.476-.183-1.284-.663-1.89-1.423-.424-.531-.413-.807-.22-1.096l.321-.497c.182-.281.218-.494.004-.849l-.794-1.319c-.314-.523-.623-.456-.89-.187z" />
+            </svg>
+        </a>
+
+        <!-- Scroll Top -->
+        <button id="scroll-top"
+            class="w-12 h-12 bg-white text-black flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-all rounded-sm opacity-0 translate-y-10 group"
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <svg class="w-6 h-6 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+</body>
+
+</html>
