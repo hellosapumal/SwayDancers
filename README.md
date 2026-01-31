@@ -2,7 +2,7 @@
 
 Welcome to the repository for the **Sway Dancers** conceptual website. Sway Dancers is a modern contemporary dance troupe based in Sri Lanka, performing Latin, Hip-Hop, Freestyle, Jazz, and Bollywood styles.
 
-![Project Preview](assets/gallery/team_5.jpg)
+![Project Preview](assets/gallery/team_7.jpg)
 
 ## 🚀 Live Demo
 *(If you have a live link, add it here. e.g., https://swaydancers.lk)*
@@ -65,5 +65,6 @@ This project is proprietary to Sway Dancers. All rights reserved.
 ---
 
 **Developed with ❤️ for Sway Dancers**
+
 
 
