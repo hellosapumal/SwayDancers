@@ -5,7 +5,7 @@ Welcome to the repository for the **Sway Dancers** conceptual website. Sway Danc
 ![Project Preview](assets/gallery/team_7.jpg)
 
 ## 🚀 Live Demo
-*(If you have a live link, add it here. e.g., https://swaydancers.lk)*
+*[www.swaydancers.lk](https://hellosapumal.github.io/SwayDancers/)*
 
 ## ✨ Features
 
@@ -44,7 +44,7 @@ Since this project uses the Tailwind CSS CDN, there is no build step required fo
 
 1. **Clone the repository** (if using Git):
    ```bash
-   git clone https://github.com/your-username/sway-dancers.git
+   git clone https://github.com/hellosapumal/SwayDancers.git
    ```
 2. **Open the project**:
    - Simply double-click `index.html` to open it in your web browser.
@@ -65,6 +65,7 @@ This project is proprietary to Sway Dancers. All rights reserved.
 ---
 
 **Developed with ❤️ for Sway Dancers**
+
 
 
 
